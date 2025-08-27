@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate - EcoSaviors Alliance Foundation</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="EcoSaviors Alliance Foundation Logo">
+                <a href="index.html#home">EcoSaviors Alliance Foundation</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#internships">Internships</a></li>
+                <li><a href="index.html#donate">Donate a Tree</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Donation Form Section -->
+    <section id="donation-form-section" class="content-section">
+        <div class="container">
+            <h2>Support Our Mission - Donate a Tree</h2>
+            <p class="section-intro">Every tree you donate helps us breathe new life into our planet. Fill out the form below to make a contribution and become a part of the EcoSaviors Alliance.</p>
+
+            <div class="donation-form-container">
+                <form action="#" method="POST" class="donation-form">
+                    <h3>Your Donation Details</h3>
+
+                    <div class="form-group">
+                        <label for="donation-amount">Choose Your Donation:</label>
+                        <select id="donation-amount" name="donation_amount" required>
+                            <option value="">-- Select an option --</option>
+                            <option value="5">Plant a Sapling - $5</option>
+                            <option value="25">Grow a Mini-Grove - $25</option>
+                            <option value="100">Cultivate a Forest - $100</option>
+                            <option value="custom">Custom Amount</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="custom-amount-field" style="display: none;">
+                        <label for="custom-donation">Custom Donation Amount ($):</label>
+                        <input type="number" id="custom-donation" name="custom_donation" min="1" placeholder="e.g., 50">
+                    </div>
+
+                    <hr>
+
+                    <h3>Your Contact Information</h3>
+
+                    <div class="form-group">
+                        <label for="full-name">Full Name:</label>
+                        <input type="text" id="full-name" name="full_name" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number (Optional):</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1234567890">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">Country:</label>
+                        <input type="text" id="country" name="country" placeholder="Your Country" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message (Optional):</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Share a message or dedication..."></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="anonymous" name="anonymous">
+                        <label for="anonymous">Donate Anonymously</label>
+                    </div>
+
+                    <button type="submit" class="cta-button">Proceed to Payment</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 EcoSaviors Alliance Foundation. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            const navLinks = document.querySelectorAll('.nav-links li');
+
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+
+                navLinks.forEach((link, index) => {
+                    if (link.style.animation) {
+                        link.style.animation = '';
+                    } else {
+                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                    }
+                });
+                
+                burger.classList.toggle('toggle');
+            });
+        }
+
+        navSlide();
+
+        // Custom Donation Amount Logic
+        const donationAmountSelect = document.getElementById('donation-amount');
+        const customAmountField = document.getElementById('custom-amount-field');
+        const customDonationInput = document.getElementById('custom-donation');
+
+        donationAmountSelect.addEventListener('change', () => {
+            if (donationAmountSelect.value === 'custom') {
+                customAmountField.style.display = 'block';
+                customDonationInput.setAttribute('required', 'required');
+            } else {
+                customAmountField.style.display = 'none';
+                customDonationInput.removeAttribute('required');
+            }
+        });
+    </script>
+</body>
+</html>
