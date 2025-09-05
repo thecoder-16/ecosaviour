@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - EcoSaviors Alliance Foundation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .gallery-section {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .image-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="EcoSaviors Alliance Foundation Logo">
+                <a href="index.html">EcoSaviors Alliance Foundation</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#internships">Internships</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="index.html#donate">Donate a Tree</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2>Our Impact in Pictures</h2>
+            <p class="section-intro">Explore the moments that define our mission. From community clean-ups to tree plantation drives, these images tell our story of change.</p>
+            <div class="gallery-container">
+                <!-- Existing Images -->
+                <div class="gallery-item">
+                    <img src="gallery/pic1.jpg" alt="Image of a tree plantation drive.">
+                    <div class="image-overlay">
+                        <h3>Plantation Drive</h3>
+                        <p>Volunteers planting saplings together.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/pic2.jpg" alt="Image of a river clean-up event.">
+                    <div class="image-overlay">
+                        <h3>River Clean-up</h3>
+                        <p>Cleaning up a local river.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/pic3.jpg" alt="Image of a community workshop.">
+                    <div class="image-overlay">
+                        <h3>Community Workshop</h3>
+                        <p>Educating the community on waste management.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/pic4.jpg" alt="Image of sapling distribution.">
+                    <div class="image-overlay">
+                        <h3>Sapling Distribution</h3>
+                        <p>Giving away saplings to students.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/pic5.jpg" alt="Image of an awareness campaign.">
+                    <div class="image-overlay">
+                        <h3>Awareness Campaign</h3>
+                        <p>Street play to raise environmental awareness.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/pic6.jpg" alt="Image of a recycling session.">
+                    <div class="image-overlay">
+                        <h3>Recycling Session</h3>
+                        <p>Learning how to recycle and upcycle.</p>
+                    </div>
+                </div>
+
+                <!-- Newly Added Images (13) -->
+                <div class="gallery-item">
+                    <img src="gallery/pic7.jpg" alt="Image of volunteers in a training session.">
+                    <div class="image-overlay">
+                        <h3>Volunteer Training</h3>
+                        <p>New members learning essential skills.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/pic8.jpg" alt="Image of a visit to a local school.">
+                    <div class="image-overlay">
+                        <h3>Local School Visit</h3>
+                        <p>Teaching kids about climate change.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/pic9.jpg" alt="Image of an eco fair booth.">
+                    <div class="image-overlay">
+                        <h3>Eco-Fair Booth</h3>
+                        <p>Showcasing our mission at a local fair.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/pic10.jpg" alt="Image of a community garden project.">
+                    <div class="image-overlay">
+                        <h3>Community Garden</h3>
+                        <p>Working together to grow fresh produce.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/pic11.jpg" alt="Image of a waste sorting activity.">
+                    <div class="image-overlay">
+                        <h3>Waste Sorting</h3>
+                        <p>Proper waste segregation demonstration.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/pic12.jpg" alt="Image of forest monitoring.">
+                    <div class="image-overlay">
+                        <h3>Forest Monitoring</h3>
+                        <p>Tracking the health of planted trees.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/pic13.jpg" alt="Image of a soil conservation project.">
+                    <div class="image-overlay">
+                        <h3>Soil Conservation</h3>
+                        <p>Practicing techniques to prevent erosion.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/pic14.jpg" alt="Image of a rainwater harvesting system.">
+                    <div class="image-overlay">
+                        <h3>Water Harvesting</h3>
+                        <p>Installing a rainwater collection system.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/pic15.jpg" alt="Image of a leadership camp.">
+                    <div class="image-overlay">
+                        <h3>Leadership Camp</h3>
+                        <p>Developing future eco-leaders.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/pic16.jpg" alt="Image of solar panel installation.">
+                    <div class="image-overlay">
+                        <h3>Solar Panel Install</h3>
+                        <p>Helping a community with green energy.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/pic17.jpg" alt="Image of wildlife observation.">
+                    <div class="image-overlay">
+                        <h3>Wildlife Observation</h3>
+                        <p>Documenting local fauna for research.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/pic18.jpg" alt="Image of a beach clean-up.">
+                    <div class="image-overlay">
+                        <h3>Beach Clean-up</h3>
+                        <p>Volunteers tidying up a local beach.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="gallery/pic19.jpg" alt="Image of the team celebrating.">
+                    <div class="image-overlay">
+                        <h3>Team Celebration</h3>
+                        <p>Celebrating a successful project.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 EcoSaviors Alliance Foundation. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            const navLinks = document.querySelectorAll('.nav-links li');
+
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+
+                navLinks.forEach((link, index) => {
+                    if (link.style.animation) {
+                        link.style.animation = '';
+                    } else {
+                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                    }
+                });
+                
+                burger.classList.toggle('toggle');
+            });
+        }
+        navSlide();
+    </script>
+</body>
+</html>
